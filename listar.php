@@ -1,10 +1,10 @@
 <?php
 
 require_once('conexao.php');
-$userid = '8';
+// $userid = '8';
 
-$pdo = $dbconn->prepare("SELECT * FROM usuario WHERE userid = :userid");
-$pdo->bindParam(':userid', $userid);
+$pdo = $dbconn->prepare("SELECT * FROM usuario");
+// $pdo->bindParam(':userid', $userid);
 $pdo->execute();
 // $rows = $pdo->fetchAll(PDO::FETCH_ASSOC);
 // $total->rowCount($rows);
@@ -33,17 +33,18 @@ $pdo->execute();
 </head>
 <body>
 <?php
+echo "<table style = 'border: 1px solid'>";
+echo "<tr>";
+echo "<th> Nome </th>" .  "<th> Sobrenome </th>" .  "<th> Email </th> ";
+echo "</tr>";
 while ($rows = $pdo->fetch(PDO::FETCH_ASSOC)) {
-    echo "<table>";
+    
     echo "<tr>";
-    echo "<th> Nome </th>" .  "<th> Sobrenome </th>" .  "<th> Email </th> ";
-    echo "</tr>";
-    echo "<tr>";
-    echo "<td>{$rows['nome']}</td>" . "<td>{$rows['sobrenome']}</td>" . "<td>{$rows['email']}</td>" ;
+    echo  "<td>{$rows['userid']}</td>" . "<td>{$rows['nome']}</td>" . " ". "<td>{$rows['sobrenome']}</td>" . " " . "<td>{$rows['email']}</td>" . "<td><button> <a href='deletar.php'> Bla</a> </button></td>" . "<br>"  ;
     echo "</tr>";
     echo "</table>";
 }
 ?>
-
+<!-- <button> <a href="deletar.php"> Bla</a> </button> -->
 </body>
 </html>
