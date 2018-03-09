@@ -4,14 +4,14 @@ require_once('conexao.php');
 // echo "$username"
 
 // Pegando os parametros
-@$nome = $_POST['nome'];
-@$sobrenome = $_POST['sobrenome'];
-@$email = $_POST['email'];
-@$senha = $_POST['senha'];
-// $nome = "Renan";
-// $sobrenome = "Araujo";
-// $email = "renan-ano10@bol.com.br";
-// $senha = "12346";
+// @$nome = $_POST['nome'];
+// @$sobrenome = $_POST['sobrenome'];
+// @$email = $_POST['email'];
+// @$senha = $_POST['senha'];
+$nome = "Renan";
+$sobrenome = "Araujo";
+$email = "renan-ano10@bol.com.br";
+$senha = "12346";
 
 
 $pdo = $dbconn->prepare("INSERT INTO usuario (nome, sobrenome, email, senha) VALUES (:nome, :sobrenome, :email, :senha)");
@@ -20,8 +20,11 @@ $pdo->bindParam(':sobrenome', $sobrenome);
 $pdo->bindParam(':email', $email);
 $pdo->bindParam(':senha', $senha);
 $pdo->execute();
+if ($pdo == true) {
+    echo "<script> alert (usuario cadastrado) </script>";
+}
 
-header("Location: teste.php");
+// header("Location: teste.php");
 
 
 

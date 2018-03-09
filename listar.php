@@ -33,6 +33,7 @@ $pdo->execute();
 </head>
 <body>
 <?php
+echo "<form action = 'deletar.php' method = 'POST'>";
 echo "<table style = 'border: 1px solid'>";
 echo "<tr>";
 echo "<th> Nome </th>" .  "<th> Sobrenome </th>" .  "<th> Email </th> ";
@@ -40,11 +41,14 @@ echo "</tr>";
 while ($rows = $pdo->fetch(PDO::FETCH_ASSOC)) {
     
     echo "<tr>";
-    echo  "<td>{$rows['userid']}</td>" . "<td>{$rows['nome']}</td>" . " ". "<td>{$rows['sobrenome']}</td>" . " " . "<td>{$rows['email']}</td>" . "<td><button> <a href='deletar.php'> Bla</a> </button></td>" . "<br>"  ;
+    echo  "<td>{$rows['userid']}</td>" . "<td>{$rows['nome']}</td>" . " ". "<td>{$rows['sobrenome']}</td>" . " " . "<td>{$rows['email']}</td>" . "<td><input type='submit' name='userid' value='Excluir'></td>" . "<td><input type='submit' name='userid' value='Atualizar'></td>" . "<br>";
+    echo "<input type='hidden' name='userid' value='{$rows['userid']}'/>";
     echo "</tr>";
     echo "</table>";
+    echo "</form>";
 }
 ?>
 <!-- <button> <a href="deletar.php"> Bla</a> </button> -->
+<!-- <input type = 'submit' value = 'Excluir'> -->
 </body>
 </html>
