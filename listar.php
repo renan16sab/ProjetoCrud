@@ -41,7 +41,7 @@ echo "</tr>";
 while ($rows = $pdo->fetch(PDO::FETCH_ASSOC)) {
     
     echo "<tr>";
-    echo  "<td>{$rows['userid']}</td>" . "<td>{$rows['nome']}</td>" . " ". "<td>{$rows['sobrenome']}</td>" . " " . "<td>{$rows['email']}</td>" . "<td><input type='submit' name='userid' value='Excluir'></td>" . "<td><input type='submit' name='userid' value='Atualizar'></td>" . "<br>";
+    echo  "<td>{$rows['userid']}</td>" . "<td>{$rows['nome']}</td>" . " ". "<td>{$rows['sobrenome']}</td>" . " " . "<td>{$rows['email']}</td>" . "<td><input type='submit' name='userid' value='Excluir'></td>" . "<td><input type='button' name='userid' value='Atualizar'></td>" . "<br>";
     echo "<input type='hidden' name='userid' value='{$rows['userid']}'/>";
     echo "</tr>";
     echo "</table>";
