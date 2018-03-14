@@ -30,7 +30,7 @@
         <a class="nav-link" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" href="">Cadastrar</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Login</a>
+        <a class="nav-link" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo" href="#">Login</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Sobre</a>
