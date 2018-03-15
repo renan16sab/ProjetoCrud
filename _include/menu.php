@@ -24,7 +24,7 @@
   <div class="card-header">
     <ul class="nav nav-pills card-header-pills">
     <li style="margin-left: 600px;" class="nav-item">
-    <a class="navbar-brand" href="index.php"> <img style="width:25px;" src="link.png"><span id = "fontlink"> LinkIzi</span> </a> 
+    <a class="navbar-brand" href="index.php"> <img style="width:25px;" src="./img/link.png"><span id = "fontlink"> LinkIzi</span> </a> 
     <span>
       <li class="nav-item">
         <a class="nav-link" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" href="">Cadastrar</a>
