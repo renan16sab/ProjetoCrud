@@ -21,36 +21,22 @@ $pdo->bindParam(':email', $email);
 $pdo->bindParam(':senha', $senha);
 $pdo->execute();
 
-$pdo = $dbconn->prepare("SELECT userid FROM usuario WHERE email=:email and senha=:senha");
-$pdo->bindParam(":email", $email);
-$pdo->bindParam(":senha", $senha);
-$pdo->execute();
-// print_r ($pdo);
 
-if($pdo->rowCount() == 1)
-    {
-       
-        
-            @$_SESSION['userid'] = $userid;
-            @$_SESSION['email'] = $email;
-            @$_SESSION['senha'] = $senha;
-            @$_SESSION['nome'] = $nome;
-            @$_SESSION['sobrenome'] = $sobrenome;
 
-                       
 
-            echo "<script>alert('Logado Com Sucesso!');
-                top.location.href='./_link/link.php';
+$users = $pdo->fetchAll(PDO::FETCH_ASSOC);
+
+if (count($users) <= 0)
+{
+    echo "<script>alert('Usuário cadastrado');
+                top.location.href='./index.php';
                 </script>";
-       
-      }
-    else
-    {
-        echo "<script>alert('Usuarios Ou Senha Incorretos!');
-            top.location.href='index.php';
-            </script>";
-    }
+    exit;
+}
+ 
 
+ 
+// header('Location: ./_link/link.php');
 
 
 

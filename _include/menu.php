@@ -20,10 +20,11 @@
     </style>
 </head>
 <body>
+
 <div style="margin-bottom:30px;" class="card text-center">
   <div class="card-header">
     <ul class="nav nav-pills card-header-pills">
-    <li style="margin-left: 600px;" class="nav-item">
+    <li class="nav-item">
     <a class="navbar-brand" href="index.php"> <img style="width:25px;" src="./img/link.png"><span id = "fontlink"> LinkIzi</span> </a> 
     <span>
       <li class="nav-item">
@@ -39,3 +40,4 @@
     </ul>
   </div>
 </div>  
+

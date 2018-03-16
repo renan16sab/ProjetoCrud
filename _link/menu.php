@@ -1,8 +1,10 @@
 <?php
+// require('../session.php');
   session_start();
+//  echo session_id();
 
   if(!$_SESSION) {
-    header("Location: ./index.php");
+    header("Location: .././index.php");
     exit;
   }
 ?>
@@ -31,7 +33,7 @@
 <div style="margin-bottom:30px;" class="card text-center">
   <div class="card-header">
     <ul class="nav nav-pills card-header-pills">
-    <li style="margin-left: 600px;" class="nav-item">
+    <li class="nav-item">
     <a class="navbar-brand" href="index.php"> <img style="width:25px;" src=".././img/link.png"><span id = "fontlink"> LinkIzi</span> </a> 
     
       <li class="nav-item">

@@ -29,6 +29,7 @@ $_SESSION['logged_in'] = true;
 $_SESSION['user_id'] = $user['userid'];
 $_SESSION['user_name'] = $user['nome'];
 // print_r ($user);
+echo session_id();
  
 header('Location: ./_link/link.php');
 // $query = $pdo->fetchAll(PDO::FETCH_ASSOC);
