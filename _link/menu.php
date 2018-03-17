@@ -1,6 +1,11 @@
 <?php
 // require('../session.php');
   session_start();
+  print_r($_SESSION);
+  // $_SESSION['userid'] == $userid;
+  // echo ['user_id'];
+
+  // session_id()
 //  echo session_id();
 
   if(!$_SESSION) {
@@ -30,11 +35,12 @@
     </style>
 </head>
 <body>
+
 <div style="margin-bottom:30px;" class="card text-center">
   <div class="card-header">
     <ul class="nav nav-pills card-header-pills">
     <li class="nav-item">
-    <a class="navbar-brand" href="index.php"> <img style="width:25px;" src=".././img/link.png"><span id = "fontlink"> LinkIzi</span> </a> 
+    <a class="navbar-brand" href="link.php"> <img style="width:25px;" src=".././img/link.png"><span id = "fontlink"> LinkIzi</span> </a> 
     
       <li class="nav-item">
         <a class="nav-link" href="">Links  Salvos</a>
