@@ -1,49 +1,16 @@
 <?php include('./_include/menu.php');?>
-<center>
-<!-- <div class="card mb-12"> -->
-<span style="height 10px; width:1200px;">
-<img src="./img/linkbanner.png" class="img-fluid" alt="Responsive image"> </span>
-  <div class="card-body">
-    <h5 class="card-title">Deseja favoritar os seus links prediletos com apeanas um click?</h5>
-    <p class="card-text">Cadastre-se agora e conheça a ferramenta LinkIzi.</p>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Cadastre-se</button>
-    </div>
-<!-- </div> -->
-</center>
 
-<!-- <div class="card text-center">
-<div class="card-body">
-    <h5 class="card-title">Deseja favoritar os seus links prediletos com apeanas um click?</h5>
-    <p class="card-text">Cadastre-se agora e conheça a ferramenta LinkIzi.</p>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Cadastre-se</button>
-    </div>
-</div> -->
-<div style="margin-top:50px;" class="card-deck">
-  <div class="card col-6">
-    <img class="card-img-top" src="./img/test.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card col-6">
-    <img class="card-img-top" src="./img/test.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card col-6">
-    <img class="card-img-top" src="./img/test.jpg" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
+
+<div class="jumbotron">
+  <h1 class="display-4">Não sabe onde salvas seus links?</h1>
+  <p class="lead">Copie a Url desejada e salve em nosso site com uma breve descrição da mesma.</p>
+  <hr class="my-4">
+  <p>Clique no botão e cadastre-se agora mesmo!</p>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Cadastre-se</button>
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">Login</button>
 </div>
+
+
 
 
 
@@ -99,7 +66,7 @@
       </div>
            <div class="modal-body">
         <form method="POST" action="session.php">
-        <!-- <input type="hidden" class="form-control" name="userid" id="recipient-name" placeholder="bla@bla.com"> -->
+        <input type="hidden" class="form-control" name="userid" id="recipient-name">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Email:</label>
             <input type="text" class="form-control" name="email" id="recipient-name" placeholder="bla@bla.com">
@@ -119,4 +86,4 @@
 </div>
 <!-- https://getbootstrap.com/docs/4.0/components/card/#navigation -->
 <!-- https://forum.imasters.com.br/topic/558367-enviar-id-através-do-modal/ -->
-  <?php include('footer.php');?>
+  <?php include('./_include/footer.php');?>

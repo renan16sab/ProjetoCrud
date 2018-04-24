@@ -1,5 +1,5 @@
 <?php
-require_once('conexao.php');
+require_once('../conexao.php');
 
 // echo "$username"
 
@@ -24,19 +24,19 @@ $pdo->execute();
 
 
 
-// $users = $pdo->fetchAll(PDO::FETCH_ASSOC);
+$users = $pdo->fetchAll(PDO::FETCH_ASSOC);
 
-// if (count($users) <= 0)
-// {
-//     echo "<script>alert('Usuário cadastrado');
-//                 top.location.href='./index.php';
-//                 </script>";
-//     exit;
-// }
+if (count($users) <= 0)
+{
+    echo "<script>alert('Usuário cadastrado');
+                top.location.href='../index.php';
+                </script>";
+    exit;
+}
  
 
  
-header('Location: ./_link/link.php');
+// header('Location: ./_link/link.php');
 
 
 

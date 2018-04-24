@@ -12,14 +12,16 @@ $pdo->execute();
 // print_r ($pdo);
 
 $users = $pdo->fetchAll(PDO::FETCH_ASSOC);
+
+// print_r($users);
  
-// if (count($users) <= 0)
-// {
-//     echo "<script>alert('Email ou senha errados');
-//                 top.location.href='./index.php';
-//                 </script>";
-//     exit;
-// }
+if (count($users) == 0)
+{
+    echo "<script>alert('Email ou senha errados');
+                top.location.href='./index.php';
+                </script>";
+    exit;
+}
  
 // pega o primeiro usuário
 $user = $users[0];
@@ -29,6 +31,8 @@ $_SESSION['logged_in'] = true;
 $_SESSION['userid'] = $user['userid'];
 $_SESSION['username'] = $user['nome'];
 $_SESSION['usernivel'] = $user['nivel'];
+
+
 // print_r ($_SESSION);
 // echo session_id();
 

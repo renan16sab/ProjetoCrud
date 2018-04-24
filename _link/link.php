@@ -1,4 +1,6 @@
-<?php include('menu.php') ?>
+<?php include('menu.php');
+  echo $_SESSION['userid'];
+  ?>
 <!DOCTYPE html>
 
 <center>
@@ -29,7 +31,7 @@
 $(document).ready(function(){
   // save comment to database
   $(document).on('click', '#submit_btn', function(){
-    var userid = $('#userid').val();
+    // var userid = $('#userid').val();
     var nome = $('#nome').val();
     var link = $('#link').val();
     $.ajax({
@@ -37,10 +39,12 @@ $(document).ready(function(){
       type: 'POST',
       data: {
         'save': 1,
+        // 'userid': userid,
         'nome': nome,
         'link': link,
       },
       success: function(response){
+        // $('#userid').val('userid');
         $('#nome').val('nome');
         $('#link').val('link');
         $('#display_area').append(response);
@@ -123,12 +127,12 @@ $(document).ready(function(){
       </div>
 
 
-      <div class="modal-body">
-      <form data-toggle="validator" action="api/update.php" method="put">
-      <input type="hidden" name="id" class="edit-id">
+<div class="modal-body">
+<form data-toggle="validator">
+<input type="hidden" name="id" class="edit-id">
 
 
-      <div class="form-group">
+<div class="form-group">
 <label class="control-label" for="title">Title:</label>
 <input type="text" name="title" class="form-control" data-error="Please enter title." required />
 <div class="help-block with-errors"></div>
